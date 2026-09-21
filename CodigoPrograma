@@ -1,0 +1,26 @@
+tarefas = ["Estudar python" , "Ir para faculdade" , "Ler livro"]
+
+while True:
+    print(tarefas)
+    print("1 - Adicionar tarefa, 2 - Ver tarefas, 3 - Remover tarefa, 4 - Sair")
+    pagina = int(input("Onde deseja ir?" ))
+    if pagina == 1:
+            adicionar = input(" qual palavra deseja adicionar?")
+            tarefas.append(adicionar)
+    elif pagina == 2:
+            posicao = 0
+            while posicao < len(tarefas):
+                print(f"Posição{posicao + 1} . {tarefas[posicao]}")
+                posicao = posicao + 1
+            print(f"Numero de coisas na lista: {len(tarefas)}")
+    elif pagina == 3:
+            posicao = 0
+            while posicao < len(tarefas):
+                print(f"Posição{posicao + 1} . {tarefas[posicao]}")
+                posicao = posicao + 1
+            remover = int(input("qual tarefa deseja remover?"))
+            tarefas.pop(remover - 1)
+    elif pagina == 4:
+            break
+    else:
+            print("Opção Invalida")
